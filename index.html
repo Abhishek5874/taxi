@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ride Sharing Interface</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Leaflet.js for OpenStreetMap -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="card route-card">
+            <div class="route-info">
+                <label for="pickup">Pickup Location:</label>
+                <input type="text" id="pickup" placeholder="Enter Pickup Location" required>
+
+                <label for="dropoff">Drop-off Location:</label>
+                <input type="text" id="dropoff" placeholder="Enter Drop-off Location" required>
+                
+                <button id="updateRoute">Update Route</button>
+            </div>
+            
+            <div class="ride-info">
+                <div class="ride-info-item">
+                    <span>8 km</span>
+                    <p>Distance</p>
+                </div>
+                <div class="ride-info-item">
+                    <span>24 min</span>
+                    <p>Time</p>
+                </div>
+                <div class="ride-info-item">
+                    <span>$4.63</span>
+                    <p>Price</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Car Section with Pricing Info -->
+        <div class="car-info">
+            <img src="keta.jpeg" alt="Car Image" class="car-image"> <!-- Placeholder car image -->
+            <div class="car-details">
+                <h3>Standard</h3>
+                <p>15 min · 4 passengers</p>
+                <div class="car-price">
+                    <span>$4.63</span>
+                    <small>$12.4</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- Map Section -->
+        <div id="map-container">
+            <div id="map"></div>
+        </div>
+
+        <!-- See Where You Traveled Section -->
+        <div class="traveled-section">
+            <h4>See where you traveled</h4>
+            <img src="map1.jpeg" alt="Map Snapshot" class="traveled-map"> <!-- Placeholder map image -->
+        </div>
+
+        <!-- Rent Button -->
+        <div class="footer">
+            <button id="rentNow">Rent now</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
